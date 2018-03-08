@@ -62,11 +62,11 @@ geolocalisations_aggregation <- function(raw_dataset,spatial_reso=1,latmin=-90,l
   dataset_table <- unique(dataset_table)
   
   ### aggragation parameters
-  list_dimensions_output = agg_parameters$list_dimensions_output
-  var_aggregated_value = agg_parameters$var_aggregated_value
-  sub_dataset = agg_parameters$sub_dataset
-  fact_name = agg_parameters$fact_name
-  if (fact_name =="fad"){number_days = agg_parameters$calculation_of_number_days}
+  list_dimensions_output = aggregation_parameter$list_dimensions_output
+  var_aggregated_value = aggregation_parameter$var_aggregated_value
+  sub_dataset = aggregation_parameter$sub_dataset
+  fact_name = aggregation_parameter$fact_name
+  if (fact_name =="fad"){number_days = aggregation_parameter$calculation_of_number_days}
   
   ######################## Select points in extent zone 
   dataset_table <- dataset_table[between(lon, lonmin,lonmax) & between(lat, latmin,latmax)]
